@@ -39,12 +39,12 @@ import { LogBox } from 'react-native';
 import user from "./reducers/users";
 import ProductDetails from "./screens/ProductDetails";
 
-LogBox.ignoreAllLogs();//Ignore all log notifications
+LogBox.ignoreAllLogs();
 const reducers = combineReducers({ user });
 
 const persistConfig = {
   key: "Demissus", 
-  storage: AsyncStorage, // Utilisation d'AsyncStorage pour React Native
+  storage: AsyncStorage, 
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);
